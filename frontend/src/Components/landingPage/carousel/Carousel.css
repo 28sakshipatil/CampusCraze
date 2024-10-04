@@ -1,0 +1,35 @@
+/* Carousels.css */
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Ensures image is responsive */
+  }
+  
+  /* Make captions smaller on small screens */
+  @media (max-width: 768px) {
+    .carousel-caption h3 {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Carousels.css */
+.carousel-slide {
+    position: relative;
+  }
+  
+  .carousel-slide .overlay {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+    color: white;
+    font-size: 2rem;
+  }
+  
