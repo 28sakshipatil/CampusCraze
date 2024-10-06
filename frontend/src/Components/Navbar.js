@@ -22,8 +22,8 @@ const useStyles = makeStyles({
     top: 0,
     left: 0,
     right: 0,
-    backdropFilter: "blur(10px)",
-    webkitBackdropFilter: "blur(10px)",
+    backdropFilter: "blur(10px) !important ",
+    webkitBackdropFilter: "blur(10px) !important",
   },
   title: {
     flexGrow: 1,
@@ -70,7 +70,7 @@ const Navbar = () => {
     <AppBar position="static" className={classes.root}>
       <Toolbar>
         <Typography variant="h6" className={classes.title}>
-          Your Website Name
+          Campus-Craze
         </Typography>
         {isMobile ? (
           <>

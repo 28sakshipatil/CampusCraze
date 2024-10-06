@@ -36,33 +36,36 @@ const SignUp = () => {
 
   return (
     <Grid container component="main" sx={{ height: '100vh' }}>
-      {/* Left side with image and welcome message */}
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={6}
+    {/* Left side with image */}
+    <Grid
+      item
+      xs={false}
+      sm={4}
+      md={6}
+      sx={{
+        position: 'relative', // Set position relative to contain the image
+        overflow: 'hidden', // Hide any overflow
+      }}
+    >
+      {/* Image that fills the left side area */}
+      <Box
+        component="img"
+        src="https://tse3.mm.bing.net/th?id=OIP.Tforem_GxDO5rtCkPpyfJwHaE-&pid=Api&P=0&h=220"
+        alt="Welcome back"
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          width: '100%', // Make the image fill the container
+          height: '100%', // Make the image fill the container
+          objectFit: 'cover', // Cover the area while maintaining aspect ratio
+          position: 'absolute', // Position the image absolutely
+          top: 0,
+          left: 0,
         }}
-      >
-        <Box sx={{ textAlign: 'center', p: 3 }}>
-          <Typography variant="h4" fontWeight="bold">
-            Dolore mollit magna aliquip anim mollit velit culpa Lorem anim in consectetur dolor quis.
-          </Typography>
-          <img
-            src="https://source.unsplash.com/random"
-            alt="Expense Management"
-            style={{ maxWidth: '80%', marginTop: '2rem' }}
-          />
-        </Box>
-      </Grid>
+      />
+    </Grid>
 
       {/* Right side with the form */}
-      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
-        <Box sx={{ my: 13, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square sx={{ backgroundColor: '#d8ca02',border: '30px solid black' }}>
+        <Box sx={{ my: 13, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' ,margin:"30px"}}>
           <Typography component="h1" variant="h5" fontWeight="bold">
             Get started absolutely free.
           </Typography>
@@ -85,6 +88,7 @@ const SignUp = () => {
                   onChange={handleChange}
                   error={!!formErrors.firstName}
                   helperText={formErrors.firstName}
+                  sx={{backgroundColor:'white'}}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -99,6 +103,7 @@ const SignUp = () => {
                   onChange={handleChange}
                   error={!!formErrors.lastName}
                   helperText={formErrors.lastName}
+                  sx={{backgroundColor:'white'}}
                 />
               </Grid>
             </Grid>
@@ -115,7 +120,7 @@ const SignUp = () => {
               onChange={handleChange}
               error={!!formErrors.email}
               helperText={formErrors.email}
-              sx={{ mt: 3 }}
+              sx={{ mt: 3,backgroundColor:'white' }}
             />
 
             <TextField
@@ -130,7 +135,7 @@ const SignUp = () => {
               onChange={handleChange}
               error={!!formErrors.college}
               helperText={formErrors.college}
-              sx={{ mt: 3 }}
+              sx={{ mt: 3 ,backgroundColor:'white'}}
             />
 
             <TextField
@@ -159,7 +164,7 @@ const SignUp = () => {
                   </InputAdornment>
                 ),
               }}
-              sx={{ mt: 3 }}
+              sx={{ mt: 3 , backgroundColor:'white'}}
             />
 
             <Button

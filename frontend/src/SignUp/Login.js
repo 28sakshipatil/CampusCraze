@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Grid, TextField, Button, Typography, Paper, IconButton, InputAdornment } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Link } from "react-router-dom";
+import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material'; // Material UI Icons for social media
 import { validateEmail, validatePassword } from './validation'; // Import validation functions
 
 const Login = () => {
@@ -33,34 +34,36 @@ const Login = () => {
 
   return (
     <Grid container component="main" sx={{ height: '100vh' }}>
-      {/* Left side with image and welcome message */}
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={6}
+    {/* Left side with image */}
+    <Grid
+      item
+      xs={false}
+      sm={4}
+      md={6}
+      sx={{
+        position: 'relative', // Set position relative to contain the image
+        overflow: 'hidden', // Hide any overflow
+      }}
+    >
+      {/* Image that fills the left side area */}
+      <Box
+        component="img"
+        src="https://tse3.mm.bing.net/th?id=OIP.Tforem_GxDO5rtCkPpyfJwHaE-&pid=Api&P=0&h=220"
+        alt="Welcome back"
         sx={{
-          backgroundColor: '#f4f6f8',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          width: '100%', // Make the image fill the container
+          height: '100%', // Make the image fill the container
+          objectFit: 'cover', // Cover the area while maintaining aspect ratio
+          position: 'absolute', // Position the image absolutely
+          top: 0,
+          left: 0,
         }}
-      >
-        <Box sx={{ textAlign: 'center', p: 3 }}>
-          <Typography variant="h4" fontWeight="bold">
-            Hi, Welcome Back
-          </Typography>
-          <img
-            src="https://plus.unsplash.com/premium_photo-1671032494233-d62d54b87f22"
-            alt="Welcome back"
-            style={{ maxWidth: '80%', marginTop: '2rem' }}
-          />
-        </Box>
-      </Grid>
+      />
+    </Grid>
 
       {/* Right side with the form */}
-      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
-        <Box sx={{ my: 13, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square sx={{ backgroundColor: '#d8ca02',border: '50px solid black' }}>
+        <Box sx={{ my: 13, mx: 4, display: 'flex', flexDirection: 'column', alignItems: 'center' ,margin:"30px" }}>
           <Typography component="h1" variant="h5" fontWeight="bold">
             Sign In to Your Account
           </Typography>
@@ -78,7 +81,7 @@ const Login = () => {
               onChange={handleChange}
               error={!!formErrors.email}
               helperText={formErrors.email}
-              sx={{ mt: 3 }}
+              sx={{ mt: 3 ,backgroundColor:'white'}}
             />
 
             <TextField
@@ -107,7 +110,7 @@ const Login = () => {
                   </InputAdornment>
                 ),
               }}
-              sx={{ mt: 3 }}
+              sx={{ mt: 3 ,backgroundColor:'white'}}
             />
 
             <Button
@@ -117,9 +120,11 @@ const Login = () => {
               sx={{
                 mt: 3,
                 mb: 2,
-                backgroundColor: '#007bff',
+                backgroundColor: 'black',
+                color:'white',
                 '&:hover': {
-                  backgroundColor: '#0056b3',
+                  backgroundColor: 'gray',
+                  
                 },
               }}
             >
@@ -135,6 +140,22 @@ const Login = () => {
               </Link>
             </Typography>
           </Grid>
+
+          {/* Social Media Icons */}
+          <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', gap: 2 }}>
+            <IconButton href="#" color="black">
+              <Facebook />
+            </IconButton>
+            <IconButton href="#" color="black">
+              <Twitter />
+            </IconButton>
+            <IconButton href="#" color="black">
+              <Instagram />
+            </IconButton>
+            <IconButton href="#" color="black">
+              <LinkedIn />
+            </IconButton>
+          </Box>
         </Box>
       </Grid>
     </Grid>

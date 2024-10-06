@@ -33,3 +33,17 @@
     font-size: 2rem;
   }
   
+  .desc{
+    color: rgba(255, 225, 0, 0.336);
+  }
+  /* Carousel.css or any other CSS file */
+.btns {
+  color: white;
+  text-transform: none; /* Makes sure the text isn't transformed */
+  background-color: transparent;
+  border: none ; 
+}
+
+.btns:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Change background on hover */
+}
