@@ -1,0 +1,17 @@
+#bodyy{
+    background-color: black;
+    color: white;
+}
+#cover {
+    background-image: url('D:\Campus-Craze\frontend\public\images\backcover1.jpg'); /* Adjust path as needed */
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    
+  }
+  .head{
+    margin:0px 0px 0px 90px;
+    position: relative;
+    top:80px;
+  }
+  

@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
-    backgroundColor: "transparent !important",
+    backgroundColor: "black !important",
     boxShadow: "none",
     zIndex: 100,
     position: "fixed",
@@ -138,13 +138,13 @@ const Navbar = () => {
             <Button color="inherit" className={classes.button} href="/about">
               About
             </Button>
-            <Button color="inherit" className={classes.button} href="/events">
+            <Button color="inherit" className={classes.button} href="/event">
               Events
             </Button>
-            <Button color="inherit" className={classes.button} href="/tickets">
+            <Button color="inherit" className={classes.button} href="/ticket">
               Tickets
             </Button>
-            <Button color="inherit" className={classes.button} href="/our-team">
+            <Button color="inherit" className={classes.button} href="/team">
               Our Team
             </Button>
             <Button
